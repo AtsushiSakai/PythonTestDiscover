@@ -33,8 +33,10 @@ class PythonTest:
 
         std=p.stdout.readlines()
         err=p.stderr.readlines()
+        # print std
+        # print err
 
-        if  "F" in err[0]:
+        if "F" in err[0]:
             for errone in err:
                 Print(errone.replace("\n",""),"red")
         else:
